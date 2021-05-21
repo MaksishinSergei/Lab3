@@ -50,7 +50,7 @@ SUITE(EncryptTest)
     TEST(SpaceText) {
         CHECK_EQUAL(wst(4,L"PROGRAM MIROVANIE"),"PRIARARNOMOIGMVE");
     }
-    TEST(NULLTEXT) {
+    TEST(EmptyText) {
         CHECK_THROW(wst(4,L" "),cipher_error);
     }
     TEST(ValiDTextWithoutletters) {
@@ -74,7 +74,7 @@ SUITE(DecryptText)
     TEST(SpaceTEXT) {
         CHECK_EQUAL(wst1(4,L"PRIARARN OMOIGMVE"),"PROGRAMMIROVANIE");
     }
-    TEST(NULLTEXT) {
+    TEST(EmptyTEXT) {
         CHECK_THROW(wst1(4,L" "),cipher_error);
     }
     TEST(TextNumberText) {
